@@ -10,21 +10,20 @@ class ProductController extends Controller
     // en los controladores es donde va la logica para no enfrascar el codigo y no generar sobrecargos
 
 
-    function index(){
-            return "Listado de productos";
+    function index()
+    {
+            return view('products.index');
     }
 
-    function create(){
-            return "Formulario de creacion de productos";
+    function create()
+    {
+            return view('products.create');
     }
 
-    function show($id, $category = null){  
-         // el ? sirve para hacer opcional, si no se pasa el valor por defecto es el que se le asigne 
-    if($category != null) {
-        return "formulario de creacion de productos: " . $id . " de la categoria: " . $category;
-    } else {
-        return "formulario de creacion de productos: " . $id;
-    }
-    }
+    function show($id, $category = null)
+    {  
 
+        return view('products.show');
+
+    }
 }

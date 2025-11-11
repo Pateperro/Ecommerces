@@ -1,0 +1,121 @@
+/* Estilo global inspirado en la identidad visual UNAB */
+:root {
+    --unab-green: #009C55;
+    --unab-green-dark: #006C3B;
+    --unab-gray: #3D3D3D;
+    --unab-light: #f5f5f5;
+    --unab-white: #ffffff;
+}
+
+/* Global */
+body {
+    background: var(--unab-light);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--unab-green);
+    padding: 10px 20px;
+}
+.navbar a {
+    color: var(--unab-white);
+    font-weight: bold;
+    margin-right: 15px;
+}
+.navbar a:hover {
+    color: var(--unab-light);
+}
+
+/* Footer */
+.footer {
+    background: var(--unab-green-dark);
+    color: var(--unab-white);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Home Container */
+.home-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.home-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--unab-green-dark);
+    margin-bottom: 5px;
+}
+.home-subtitle {
+    color: var(--unab-gray);
+    font-size: 1.1rem;
+}
+
+/* Acciones del dashboard */
+.dash-actions {
+    display: flex;
+    gap: 15px;
+    background: var(--unab-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+/* Botones estilo UNAB */
+.btn {
+    padding: 10px 18px;
+    background: var(--unab-green);
+    color: var(--unab-white);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover {
+    background: var(--unab-green-dark);
+}
+.btn--ghost {
+    background: transparent;
+    color: var(--unab-green-dark);
+    border: 2px solid var(--unab-green-dark);
+}
+.btn--ghost:hover {
+    background: var(--unab-green-dark);
+    color: var(--unab-white);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .dash-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .dash-actions form {
+        margin-left: 0;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar a {
+        margin: 5px 0;
+    }
+}

@@ -64,18 +64,10 @@ button:hover {
 <header>
   <h1>MiTienda</h1>
 </header>
->>>>>>> task
+
 
 <form>
   <h2>Crear nuevo producto</h2>
-
-<<<<<<< HEAD
-    </form>
-    
-@endsection
-    
-
-=======
   <label>Nombre del producto</label>
   <input type="text" placeholder="Ej. Audífonos Bluetooth" required>
 
@@ -92,4 +84,4 @@ button:hover {
 </form>
 </body>
 </html>
->>>>>>> task
+

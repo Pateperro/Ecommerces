@@ -1,27 +1,95 @@
-@extends('layouts.app')
 
-@section('content')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear Producto</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaeded;
+  margin: 0;
+}
+header {
+  background-color: #131921;
+  color: white;
+  padding: 15px 30px;
+}
+form {
+  background-color: white;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+textarea {
+  resize: none;
+  height: 80px;
+}
+button {
+  background-color: #FFD814;
+  border: 1px solid #FCD200;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #F7CA00;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>MiTienda</h1>
+</header>
+>>>>>>> task
 
-    <h1>FORM FOR CREATE A PRODUCT</h1>
+<form>
+  <h2>Crear nuevo producto</h2>
 
-    <form action="" method="post">
-        <label for="nombre">Name: </label>
-        <input type="text" name="name">
-        <br>
-        <label for="description">Description</label>
-        <textarea name="description" cols="30" rows="10"></textarea>
-        <br>
-        <label for="price">Price: </label>
-        <input type="number" name='price'>
-        <br>
-        <label for="img">Image: </label>
-        <input type="file" name="image">
-        <br>
-        <label for="brand">Brand</label>
-        <input type="text" name="brand">
-
+<<<<<<< HEAD
     </form>
     
 @endsection
     
 
+=======
+  <label>Nombre del producto</label>
+  <input type="text" placeholder="Ej. Audífonos Bluetooth" required>
+
+  <label>Precio</label>
+  <input type="number" placeholder="Ej. 59.99" required>
+
+  <label>Descripción</label>
+  <textarea placeholder="Escribe una descripción del producto"></textarea>
+
+  <label>URL de la imagen</label>
+  <input type="text" placeholder="https://...">
+
+  <button type="submit">Guardar producto</button>
+</form>
+</body>
+</html>
+>>>>>>> task

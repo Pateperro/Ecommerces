@@ -1,1 +1,7 @@
-    <h1>NAVBAR</h1>
+
+  <header>
+    <h1>Eccommers</h1>
+    <nav>
+      <a href="#">Inicio</a>
+    </nav>
+  </header>

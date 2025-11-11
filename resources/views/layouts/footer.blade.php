@@ -1,2 +1,3 @@
-
-    <h1>FOOTER</h1>
+  <footer>
+    © 2025 Eccommers | zas.
+  </footer>

@@ -3,7 +3,7 @@
 @section('title', 'Crear Producto')
 
 @section('content')
-<div class="container">
+<div class="form-container">
     <h1>Crear nuevo producto</h1>
 
     <form action="" method="POST">

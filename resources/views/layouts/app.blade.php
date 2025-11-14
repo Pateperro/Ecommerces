@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', "Eccommers")</title>
 
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    
+
     @include('layouts.navbar')
 
     <main>
@@ -18,5 +17,6 @@
     </main>
 
     @include('layouts.footer')
+
 </body>
 </html>

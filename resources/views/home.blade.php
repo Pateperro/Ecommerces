@@ -1,19 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
-<div class="home-container">
-    <header class="home-header">
-        <h1 class="home-title">Bienvenido a tu panel</h1>
-        <p class="home-subtitle">Gestión de productos - UNAB</p>
-    </header>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
-    <div class="dash-actions">
-        <a href="{{ url('products') }}" class="btn">Ver productos</a>
-        <a href="{{ route('products.create') }}" class="btn btn--ghost">Crear producto</a>
-
-    
-        </form>
+                    {{ __('You are logged in!') }}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

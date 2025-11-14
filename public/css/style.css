@@ -4,186 +4,173 @@
 :root {
     --unab-orange: #F39200;
     --unab-orange-dark: #c97400;
-    --unab-green: #009C55;
-    --unab-green-dark: #006C3B;
-    --unab-gray: #3D3D3D;
-    --unab-light: #f5f5f5;
+    --unab-green: #009C3B;
+    --unab-gray: #4D4D4D;
+    --unab-light-gray: #f6f6f6;
     --unab-white: #ffffff;
-    --unab-footer-bg: #333333;
 }
 
 /* ---------------------------------------------------------
-   GLOBAL
+   RESET Y BASE
 --------------------------------------------------------- */
 body {
-    background: var(--unab-light);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--unab-light-gray);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    color: var(--unab-gray);
 }
 
-a {
-    text-decoration: none;
-}
+
 
 /* ---------------------------------------------------------
-   NAVBAR UNAB — Blanco + Naranja institucional
+   NAVBAR UNAB
 --------------------------------------------------------- */
-.navbar-unab {
-    width: 100%;
-    background-color: var(--unab-white);
+
+.navbar {
+    background-color: var(--unab-white) !important;
     border-bottom: 4px solid var(--unab-orange);
-    padding: 10px 0;
+    padding: 10px 20px !important;
 }
 
-.navbar-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar-brand img {
+    height: 55px;
 }
 
-/* LOGO */
-.navbar-logo img {
-    height: 45px;
-    object-fit: contain;
-}
-
-/* LINKS */
-.navbar-links {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar-links a {
+.navbar .nav-link {
+    color: var(--unab-gray) !important;
     font-weight: 600;
-    color: var(--unab-gray);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.navbar-links a:hover {
-    color: var(--unab-orange);
+.navbar .nav-link:hover {
+    color: var(--unab-orange) !important;
 }
+
+/* Botón del navbar */
+.navbar .btn-unab {
+    background-color: var(--unab-orange);
+    color: var(--unab-white);
+    border-radius: 8px;
+    padding: 6px 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.navbar .btn-unab:hover {
+    background-color: var(--unab-orange-dark);
+}
+
+
 
 /* ---------------------------------------------------------
-   HOME / DASHBOARD
+   CONTENEDOR GENERAL
 --------------------------------------------------------- */
-.home-container {
-    flex: 1;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
+.content-wrapper {
+    margin-top: 40px;
 }
 
-.home-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
 
-.home-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--unab-orange-dark);
-    margin-bottom: 5px;
-}
 
-.home-subtitle {
-    color: var(--unab-gray);
-    font-size: 1.1rem;
-}
+/* ---------------------------------------------------------
+   ESTILO FORMULARIOS UNAB
+--------------------------------------------------------- */
 
-/* Acciones del dashboard */
-.dash-actions {
-    display: flex;
-    gap: 15px;
+.form-box {
     background: var(--unab-white);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    align-items: center;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    border-top: 5px solid var(--unab-orange);
 }
+
+.form-box h2 {
+    text-align: center;
+    color: var(--unab-orange);
+    margin-bottom: 25px;
+}
+
+/* Inputs con Bootstrap pero versión UNAB */
+.form-control {
+    border: 2px solid #ddd !important;
+    border-radius: 10px !important;
+    padding: 10px 12px !important;
+    transition: 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--unab-orange) !important;
+    box-shadow: 0 0 5px rgba(243, 146, 0, 0.4) !important;
+}
+
+/* Labels */
+.form-label {
+    font-weight: bold;
+    color: var(--unab-gray);
+}
+
+
 
 /* ---------------------------------------------------------
    BOTONES UNAB
 --------------------------------------------------------- */
-.btn {
+
+.btn-unab-main {
+    width: 100%;
+    background-color: var(--unab-orange) !important;
+    color: var(--unab-white) !important;
     padding: 10px 18px;
-    background: var(--unab-orange);
-    color: var(--unab-white);
-    border-radius: 8px;
     font-weight: bold;
-    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s ease;
 }
 
-.btn:hover {
-    background: var(--unab-orange-dark);
+.btn-unab-main:hover {
+    background-color: var(--unab-orange-dark) !important;
 }
 
-.btn--ghost {
-    background: transparent;
-    color: var(--unab-orange-dark);
-    border: 2px solid var(--unab-orange-dark);
-}
 
-.btn--ghost:hover {
-    background: var(--unab-orange-dark);
-    color: var(--unab-white);
-}
 
 /* ---------------------------------------------------------
-   FOOTER UNAB — Oscuro + centrado
+   TABLAS
 --------------------------------------------------------- */
-.footer-unab {
-    background: #000000; /* Fondo negro */
+.table thead {
+    background-color: var(--unab-orange);
+    color: var(--unab-white);
+}
+
+.table tbody tr:hover {
+    background-color: #fff3e0;
+}
+
+
+
+/* ---------------------------------------------------------
+   CARDS
+--------------------------------------------------------- */
+.card {
+    border-radius: 12px;
+    border-top: 4px solid var(--unab-orange);
+}
+
+
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+footer {
+    background-color: #000;
     color: var(--unab-white);
     text-align: center;
-    padding: 30px 20px;
-    margin-top: auto; /* Hace que se quede abajo si usas flex en body */
-    border-top: 4px solid var(--unab-green);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    width: 100%;
 }
 
-.footer-unab .footer-container {
-    max-width: 1200px;
-    width: 90%;
-}
-
-.footer-unab .footer-info p {
-    margin: 4px 0;
-    color: #cccccc;
-}
-
-.footer-unab .footer-title {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: var(--unab-green);
-    margin-bottom: 10px;
-}
-
-/* ---------------------------------------------------------
-   RESPONSIVE
---------------------------------------------------------- */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navbar-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .dash-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
+footer p {
+    margin: 0;
+    font-size: 14px;
 }

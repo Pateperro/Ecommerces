@@ -10,6 +10,7 @@
         <div class="navbar-links">
             <a href="/">Inicio</a>
             <a href="/products">Productos</a>
+            <a href="/create">Create</a>
         </div>
 
     </div>

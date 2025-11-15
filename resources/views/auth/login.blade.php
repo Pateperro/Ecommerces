@@ -62,6 +62,11 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                                <!-- 🔹 Botón para registrarse -->
+                                <a class="btn btn-secondary ms-2" href="{{ route('register') }}">
+                                    {{ __('Register') }}
+                                </a>
                             </div>
                         </div>
                     </form>

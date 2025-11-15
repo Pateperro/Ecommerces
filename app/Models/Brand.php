@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Brand extends Model
 {
-    protected $table = 'category';
+    protected $table = 'brand';
 
     protected $fillable = [
         'name',
@@ -15,6 +15,6 @@ class Category extends Model
     // Relaciones
     public function products()
     {
-        return $this->hasMany(Product::class, 'category_id');
+        return $this->hasMany(Product::class, 'brand');
     }
 }

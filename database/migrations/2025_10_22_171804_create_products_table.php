@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreign('category_id')->references('id')->on('category');
 
 
-            $table->foreignId('brand')->references('id')->on('brand'); /* Forma rapida de crear la conexion ahorando la linea de usingnedBigIntenger   */
+            $table->foreignId('brand_id')->references('id')->on('brand'); /* Forma rapida de crear la conexion ahorando la linea de usingnedBigIntenger   */
         });
     }
 

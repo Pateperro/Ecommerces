@@ -2,22 +2,35 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
-
-    // Nombre de la tabla (opcional si el nombre sigue la convención)
     protected $table = 'products';
-    protected $primaryKey = 'id';
-    public $timestamps =true;
 
-    // Indica qué columnas se pueden llenar con create() o update()
     protected $fillable = [
         'name',
         'price',
-        'description'
+        'description',
+        'category_id',
+        'brand',
     ];
+
+    // Relación con categoría
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    // Relación con marca
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class, 'brand');
+    }
+
+    // Relación con imágenes
+    public function images()
+    {
+        return $this->hasMany(ImgProduct::class, 'product_id');
+    }
 }

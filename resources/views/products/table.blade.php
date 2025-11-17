@@ -4,7 +4,9 @@
     <div class="card">
         <div class="card-body">
 
-            <h2>Products List</h2>
+            <h3>Products List</h3>
+
+                     <a type="button" class="btn btn-succes" href="{{route('admin.products.create')}}">Add new product</a>
 
             <table class="table align-items-center mb-0">
                 <thead>

@@ -19,5 +19,17 @@ class Product extends Model
         'category_id',
         'brand_id',
     ];
+
+    // Relación con Category
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    // Relación con Brand
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
     
 }

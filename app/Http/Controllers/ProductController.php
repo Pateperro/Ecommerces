@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-
-    // en los controladores es donde va la logica para no enfrascar el codigo y no generar sobrecargos
-
-
     function index()
     {
         return view('products.index');
@@ -29,46 +25,35 @@ class ProductController extends Controller
         ]);
     }
 
-    function show($id, $category = null)
-    {
-
-        return view('products.show');
-    }
-
-
     function store(Request $request)
     {
-
-        $request->validate([
-            "name" => 'require|string|max:255',
-            "description" => 'require|string',
-            "price" => 'require|numeric',
-            "name" => 'require|exists:categories,id',
-            "name" => 'require|exists:brands,id'
+        // Validaciones
+        $request->validate([    
+            "name" => 'required|string|max:255',
+            "description" => 'nullable|string',
+            "price" => 'required|numric|min:0|max:999999.99',
+            "category" => 'required|exists:categories,id',
+            "brand" => 'required|exists:brand,id'
         ]);
 
         $product = new Product();
         $product->name = $request->get('name');
         $product->description = $request->get('description');
         $product->price = $request->get('price');
-        $product->category_id = $request->get('categary');
+        $product->category_id = $request->get('category'); // corregido typo 'categary'
         $product->brand_id = $request->get('brand');
 
         $product->save();
 
-        return "Save Product!!!";
+        return redirect()->route('admin.products.table');
     }
 
     public function table()
     {
-
-        $product = Product::OrderBy('id', 'desc')->paginate(10);
+        $products = Product::with(['category', 'brand'])->orderBy('id', 'desc')->paginate(10);
 
         return view('products.table', [
-            'products' => $product
+            'products' => $products
         ]);
-
-
-
     }
 }

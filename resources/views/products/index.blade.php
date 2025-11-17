@@ -7,7 +7,7 @@
 
     <h1>Lista de productos</h1>
 
-    <a href="{{ route('products.create') }}" class="btn">Crear producto</a>
+    <a href="{{ route('admin.products.createAdmin') }}" class="btn">Crear producto</a>
 
     <div class="product-list">
         <p>Aquí irá la lista de productos.</p>

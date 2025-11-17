@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('/assets/img/apple-icon.png')}}">
   <link rel="icon" type="image/png" href="{{asset('/assets/img/logos/LogoUNAB/logo_tiny.png')}}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <title>
     Admin - UnabShop
   </title>
@@ -44,15 +46,15 @@
   </main>
 
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="{{asset('assets/js/core/popper.min.js')}}"></script>
+  <script src="{{asset('assets/js/core/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
+  <script src="{{asset('assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
+  <script src="{{asset('assets/js/plugins/chartjs.min.js')}}"></script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/material-dashboard.min.js?v=3.2.0"></script>
+  <script src="{{asset('/assets/js/material-dashboard.min.js?v=3.2.0')}}"></script>
 </body>
 
 </html>

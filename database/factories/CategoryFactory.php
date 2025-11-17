@@ -10,14 +10,28 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CategoryFactory extends Factory
 {
-    
+
     protected $model = Category::class;
 
 
     public function definition(): array
     {
+
+        $category = [
+            "Gaming Consoles",
+            "PC Gaming",
+            "Gaming Accessories",
+            "Headphones & Audio",
+            "Smartphones & Tablets",
+            "Wearable Technology",
+            "VR & AR Devices",
+            "Computer Components",
+            "Gaming Chairs & Furniture"
+        ];
+
+
         return [
-            'name' => fake()->name()
+            'name' => $this->faker->randomElement($category)
         ];
     }
 }

@@ -10,7 +10,7 @@
 
     <div class="dash-actions">
         <a href="{{ url('products') }}" class="btn">Ver productos</a>
-        <a href="{{ route('products.create') }}" class="btn btn--ghost">Crear producto</a>
+        <a href="{{ route('admin.products.createAdmin') }}" class="btn btn--ghost">Crear producto</a>
     </div>
 </div>
 

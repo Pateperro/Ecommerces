@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 // Grupo de rutas de productos
 Route::prefix('products')->controller(ProductController::class)->group(function () {
     Route::get('/', 'index')->name('products.index');
-    Route::get('/create', 'create')->name('products.create');
+   
     Route::get('/show/{id}', 'show')->name('products.show');
 });
 
@@ -27,4 +27,8 @@ Route::prefix('admin')->group(function(){
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     Route::get('category/create', [CategoryController::class, 'create'])->name('admin.category.create');
     Route::post('category/store', [CategoryController::class, 'store'])->name('admin.category.store');
+
+
+   
+    Route::get('products/create', [ProductController::class, 'create'])->name('admin.products.createAdmin');
 });

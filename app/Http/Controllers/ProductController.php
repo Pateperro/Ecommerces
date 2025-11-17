@@ -23,21 +23,22 @@ class ProductController extends Controller
         $brands = Brand::all();
         $categories = Category::all();
 
-        return view('products.create',[
+        return view('products.create', [
             'brands' => $brands,
             'categories' => $categories
         ]);
     }
 
-    function show($id, $category = null) 
+    function show($id, $category = null)
     {
 
         return view('products.show');
     }
 
 
-    function store(Request $request){
-        
+    function store(Request $request)
+    {
+
         $request->validate([
             "name" => 'require|string|max:255',
             "description" => 'require|string',
@@ -56,7 +57,15 @@ class ProductController extends Controller
         $product->save();
 
         return "Save Product!!!";
- 
     }
 
+    public function table()
+    {
+
+        $product = Product::all();
+
+        return view('products.table', [
+            'products' => $product
+        ]);
+    }
 }

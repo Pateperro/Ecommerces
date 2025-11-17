@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -28,9 +29,27 @@ class ProductController extends Controller
         ]);
     }
 
-    function show($id, $category = null)
+    function show($id, $category = null) 
     {
 
         return view('products.show');
     }
+
+
+    function store(Request $request){
+        dd($request->all());
+
+        $product = new Product();
+        $product->name = $request->get('name');
+        $product->description = $request->get('description');
+        $product->price = $request->get('price');
+        $product->category_id = $request->get('categary');
+        $product->brand_id = $request->get('brand');
+
+        $product->save();
+
+        return "Save Product!!!";
+ 
+    }
+
 }

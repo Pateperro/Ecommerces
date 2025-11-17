@@ -9,7 +9,7 @@
 
                 <h1 class="text-center mb-4">Crear nuevo producto</h1>
 
-                <form action="" method="POST">
+                <form action="{{route('admin.products.store')}}" method="POST">
                     @csrf
 
                     <!-- Nombre del producto -->
